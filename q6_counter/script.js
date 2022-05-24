@@ -3,35 +3,42 @@
 let plusButton = document.querySelector('button#increment')
 let count = 0
 plusButton.addEventListener('click', function(){
-    if (document.querySelector('#box').value < 10){
+    if (document.querySelector('#box').innerHTML < 10){
         count ++
     }
     
     document.querySelector('#box').innerHTML = count
+
     if (count % 2 == 0) {
-        document.querySelector('#box').style.color = 'red'
+        document.querySelector('#box').style.backgroundColor = 'green'
     }
     else {
-        document.querySelector('#box').style.color = 'green'
+        document.querySelector('#box').style.backgroundColor = 'red'
     }
 })
 
+if (count % 2 == 0) {
+    document.querySelector('#box').style.backgroundColor = 'green'
+}
+else {
+    document.querySelector('#box').style.backgroundColor = 'red'
+}
 
 // 2. Add another button, with the label '-',  to the HTML such that when it is clicked, the number inside
 // the box goes down by 1.  **Make sure you place this button after the increment button**
 let minusButton = document.querySelector('button#decrement')
 minusButton.addEventListener('click', function(){
-    if (document.querySelector('#box').value > 0) {
+    if (document.querySelector('#box').innerHTML > 0) {
         count --
     }
     
     document.querySelector('#box').innerHTML = count
     
     if (count % 2 == 0) {
-        document.querySelector('#box').style.color = 'red'
+        document.querySelector('#box').style.backgroundColor = 'green'
     }
     else {
-        document.querySelector('#box').style.color = 'green'
+        document.querySelector('#box').style.backgroundColor = 'red'
     }
 })
 
